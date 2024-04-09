@@ -118,3 +118,59 @@ export const App = () => {
 
 #### Инициализируем git:
 - git init
+
+## Установка пакетов тестирования:
+- npm install --save-dev @testing-library/react @testing-library/jest-dom
+- npm install --save-dev jest jest-environment-jsdom ts-jest
+
+#### Создадим конфиг jest.config.js:
+module.exports = {
+  preset: 'ts-jest',
+  transform: {
+    '^.+.(ts|tsx|js|jsx)$': 'ts-jest',
+  },
+  testEnvironment: 'jsdom',
+  transformIgnorePatterns: ['node_modules'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+}
+
+#### Создаём файл установщик который будет экспортировать testing-library в jest: 
+- название файла jest.setup.js:
+import '@testing-library/jest-dom'
+
+#### Добавляем ESLint:
+- npm install --save-dev eslint-plugin-jest
+- создаём в корне файл для него eslint.json:
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest/globals": true
+  },
+  "extends": ["plugin:react/recommended", "plugin:jest/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "jest"],
+  "rules": {
+    "no-underscore-dangle": 0,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "always",
+        "jsx": "always"
+      }
+    ]
+  }
+}
+
+#### В скрипты добавляем команду для запуска тестов:
+"scripts": {
+    ...,
+    "test": "jest"
+}
