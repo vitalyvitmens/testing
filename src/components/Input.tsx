@@ -12,7 +12,7 @@ export const Input = ({ value, onChange }: Props) => {
     const val = event.target.value
 
     if (val.length > 32) {
-      setLabelValue(`Слишком длинный заголовок ${val.length}`)
+      setLabelValue(`Превышена максимальная длина заголовка ${val.length}`)
     } else {
       setLabelValue('')
       onChange(val)

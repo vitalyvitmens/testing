@@ -29,10 +29,9 @@
     "sourceMap": true,
     "target": "esnext"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "coverage"]
-}
-```
+  "include": ["src", "spec"],
+  "exclude": ["node_modules", "coverage", "spec/__mocks__"]
+}```
 #### Устанавливаем webpack и плагины:
 - npm i --save-dev webpack webpack-cli webpack-dev-server css-loader html-webpack-plugin mini-css-extract-plugin ts-loader 
 
@@ -138,6 +137,9 @@ module.exports = {
   testEnvironment: 'jsdom',
   transformIgnorePatterns: ['node_modules'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapper: {
+    '\\.(css|less)$': '<rootDir>/spec/__mocks__/styleMock.js',
+  },
 }
 ```
 #### Создаём файл установщик который будет экспортировать testing-library в jest: 
