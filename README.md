@@ -36,7 +36,8 @@
 - npm i --save-dev webpack webpack-cli webpack-dev-server css-loader html-webpack-plugin mini-css-extract-plugin ts-loader 
 
 - webpack.config.js
-`const prod = process.env.NODE_ENV === 'production'
+`
+const prod = process.env.NODE_ENV === 'production'
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -78,8 +79,8 @@ module.exports = {
     hot: true,
     liveReload: false,
   },
-}`
-
+}
+`
 #### Добавляем скрипты запуска:
  `"scripts": {
     "start": "webpack serve --port 3000",
@@ -92,7 +93,8 @@ module.exports = {
 - npm i --save-dev @types/react @types/react-dom
 
 - src\index.tsx
-`import { createRoot } from 'react-dom/client'
+```
+import { createRoot } from 'react-dom/client'
 import { App } from './App'
 
 const container = document.getElementById('root')
@@ -105,8 +107,8 @@ export const App = () => {
   return (
     <div>App</div>
   )
-}`
-
+}
+```
 #### Запускаем приложение:
 - npm run start
 - открываем в браузере по ссылке http://localhost:3000/
