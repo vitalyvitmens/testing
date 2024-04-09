@@ -1,5 +1,8 @@
+import { useState } from 'react'
+import { Input } from './components/Input'
+
 export const App = () => {
-  return (
-    <div>Test React App from scratch</div>
-  )
+  const [Inputvalue, setInputValue] = useState('')
+
+  return <Input value={Inputvalue} onChange={(val) => setInputValue(val)} />
 }
