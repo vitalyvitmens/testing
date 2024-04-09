@@ -16,7 +16,8 @@
 - npm i --save-dev typescript
 
 - tsconfig.json
-`{
+```
+{
   "compilerOptions": {
     "jsx": "react-jsx",
     "allowJs": true,
@@ -30,13 +31,13 @@
   },
   "include": ["src"],
   "exclude": ["node_modules", "coverage"]
-}`
-
+}
+```
 #### Устанавливаем webpack и плагины:
 - npm i --save-dev webpack webpack-cli webpack-dev-server css-loader html-webpack-plugin mini-css-extract-plugin ts-loader 
 
 - webpack.config.js
-`
+```
 const prod = process.env.NODE_ENV === 'production'
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -80,12 +81,14 @@ module.exports = {
     liveReload: false,
   },
 }
-`
+```
 #### Добавляем скрипты запуска:
- `"scripts": {
+```
+ "scripts": {
     "start": "webpack serve --port 3000",
     "build": "NODE_ENV=production webpack"
-  }`
+  }
+```
 
 #### Создаём index.html и устанавливаем React:
 - npm i react react-dom
@@ -126,7 +129,8 @@ export const App = () => {
 - npm install --save-dev jest jest-environment-jsdom ts-jest @types/jest
 
 #### Создадим конфиг jest.config.js:
-`module.exports = {
+```
+module.exports = {
   preset: 'ts-jest',
   transform: {
     '^.+.(ts|tsx|js|jsx)$': 'ts-jest',
@@ -134,16 +138,17 @@ export const App = () => {
   testEnvironment: 'jsdom',
   transformIgnorePatterns: ['node_modules'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-}`
-
+}
+```
 #### Создаём файл установщик который будет экспортировать testing-library в jest: 
 - название файла jest.setup.js:
-`import '@testing-library/jest-dom'`
+```import '@testing-library/jest-dom'```
 
 #### Добавляем ESLint:
 - npm install --save-dev eslint-plugin-jest
 - создаём в корне файл для него eslint.json:
-`{
+```
+{
   "env": {
     "browser": true,
     "es2021": true,
@@ -169,14 +174,15 @@ export const App = () => {
       }
     ]
   }
-}`
-
+}
+```
 #### В скрипты добавляем команду для запуска тестов:
-`"scripts": {
+```
+"scripts": {
     ...,
     "test": "jest"
-}`
-
+}
+```
 
 #### Создаем папку spec в корне проекта для написания тестов папку так же можно назвать test что аналогично spec и  вней создадим файл нашего первого теста по названию компонента spec\App.spec.tsx
 - для запуска тестов используй команду npm run test
