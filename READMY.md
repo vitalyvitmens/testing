@@ -121,7 +121,7 @@ export const App = () => {
 
 ## Установка пакетов тестирования:
 - npm install --save-dev @testing-library/react @testing-library/jest-dom
-- npm install --save-dev jest jest-environment-jsdom ts-jest
+- npm install --save-dev jest jest-environment-jsdom ts-jest @types/jest
 
 #### Создадим конфиг jest.config.js:
 module.exports = {
@@ -174,3 +174,6 @@ import '@testing-library/jest-dom'
     ...,
     "test": "jest"
 }
+
+
+#### Создаем папку spec в корне проекта для написания тестов папку так же можно назвать test что аналогично spec и  вней создадим файл нашего первого теста по названию компонента spec\App.spec.tsx
