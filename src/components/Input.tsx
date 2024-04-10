@@ -21,9 +21,16 @@ export const Input = ({ value, onChange }: Props) => {
 
   return (
     <div className="input-field">
-      <span>Введите заголовок</span>
-      <input type="text" value={value} onChange={handleChange} />
-      <label>{labelValue}</label>
+      <label htmlFor="input-header-field-id">Введите заголовок</label>
+      <input
+        id="input-header-field-id"
+        // aria-hidden={true}
+        type="text"
+        value={value}
+        onChange={handleChange}
+        placeholder="Введите заголовок"
+      />
+      <span>{labelValue}</span>
     </div>
   )
 }
