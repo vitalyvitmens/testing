@@ -1,4 +1,4 @@
-//! Запросы к дереву Query-методы. Признак ByLabelText.spec.tsx
+//! Запросы к дереву Query-методы. Признак ByLabelText
 import { render, prettyDOM, getDefaultNormalizer } from '@testing-library/react'
 import { Input } from '../src/components/Input'
 

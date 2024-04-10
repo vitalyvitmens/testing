@@ -28,7 +28,9 @@ export const Input = ({ value, onChange }: Props) => {
         type="text"
         value={value}
         onChange={handleChange}
-        placeholder="Введите заголовок"
+        placeholder={`например, введите "купить молоко"`}
+        alt="поле для ввода заголовка задачи"
+        title="поле для заголовка"
       />
       <span>{labelValue}</span>
     </div>
