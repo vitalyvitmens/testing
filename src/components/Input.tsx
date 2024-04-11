@@ -32,7 +32,7 @@ export const Input = ({ value, onChange }: Props) => {
         alt="поле для ввода заголовка задачи"
         title="поле для заголовка"
       />
-      <span>{labelValue}</span>
+      <span data-testid="hint-text">{labelValue}</span>
     </div>
   )
 }
