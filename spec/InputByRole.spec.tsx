@@ -1,4 +1,4 @@
-//! Запросы к дереву Query-методы. Признак ByRole
+//! Запросы к дереву Query-методы. Поисковый признак ByRole
 import { render, prettyDOM, logRoles } from '@testing-library/react'
 import { Input } from '../src/components/Input'
 

@@ -1,4 +1,4 @@
-//! Запросы к дереву Query-методы. Признак ByLabelText
+//! Запросы к дереву Query-методы. Поисковый признак ByLabelText
 import { render, prettyDOM, getDefaultNormalizer } from '@testing-library/react'
 import { Input } from '../src/components/Input'
 

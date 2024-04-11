@@ -1,4 +1,4 @@
-//! Запросы к дереву Query-методы. Признаки: ByPlaceholderText, ByAltText, ByTitle
+//! Запросы к дереву Query-методы. Поисковые признаки: ByPlaceholderText, ByAltText, ByTitle
 import { render, prettyDOM } from '@testing-library/react'
 import { Input } from '../src/components/Input'
 

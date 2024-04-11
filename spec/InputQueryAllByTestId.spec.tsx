@@ -1,4 +1,4 @@
-//! Запросы к дереву Query-методы. Признак queryByPlaceholderText
+//! Запросы к дереву. Префиксы действия: queryAllByTestId
 import { render, prettyDOM } from '@testing-library/react'
 import { Input } from '../src/components/Input'
 
@@ -8,16 +8,15 @@ describe('Поле ввода', () => {
   it('Поле доступно для ввода', () => {
     const fn = jest.fn()
 
-    const { queryByPlaceholderText } = render(
+    const { queryAllByTestId } = render(
       <Input value="Greetings!" onChange={fn} />
     )
 
-    const input = queryByPlaceholderText('заголовок', { exact: false })
+    const element = queryAllByTestId('input', { exact: false })
 
-    if (input) {
-      console.log(prettyDOM(input))
-    } else console.log('Элемент не найден!')
+    console.log(element.length)
+    element.forEach((x) => console.log(prettyDOM(x)))
   })
 })
 
-// npm test -- InputQuery.spec.tsx --watch
+// npm test -- InputQueryAllByTestId.spec.tsx --watch

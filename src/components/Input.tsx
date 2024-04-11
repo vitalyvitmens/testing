@@ -21,7 +21,9 @@ export const Input = ({ value, onChange }: Props) => {
 
   return (
     <div className="input-field">
-      <label htmlFor="input-header-field-id">Введите заголовок</label>
+      <label htmlFor="input-header-field-id" data-testid="input-label">
+        Введите заголовок
+      </label>
       <input
         id="input-header-field-id"
         // aria-hidden={true}
@@ -31,8 +33,9 @@ export const Input = ({ value, onChange }: Props) => {
         placeholder={`например, введите "купить молоко"`}
         alt="поле для ввода заголовка задачи"
         title="поле для заголовка"
+        data-testid="input-field"
       />
-      <span data-testid="hint-text">{labelValue}</span>
+      <span data-testid="input-hint-text">{labelValue}</span>
     </div>
   )
 }

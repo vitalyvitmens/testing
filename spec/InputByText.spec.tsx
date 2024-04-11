@@ -1,4 +1,4 @@
-//! Запросы к дереву Query-методы. Признаки: ByText
+//! Запросы к дереву Query-методы. Поисковый признак: ByText
 import { render, prettyDOM } from '@testing-library/react'
 import { Input } from '../src/components/Input'
 
