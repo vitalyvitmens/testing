@@ -6,6 +6,9 @@ type OwnMatcher<Params extends unknown[]> = (
 
 declare global {
   namespace jest {
+    interface Expect {
+      toHaveDoneItem(): any
+    }
     interface Matchers<R, T> {
       toBeShorterThan(len: number): T
     }
