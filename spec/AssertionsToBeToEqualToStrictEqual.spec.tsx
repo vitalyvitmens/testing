@@ -78,4 +78,4 @@ it('Строгое сравнение значений', () => {
   expect(TestClassValue).toEqual(TestClassValue2) // тест проходит так как toEqual() сравнивает значения, не взирая на разные экземпляры классов и поля undefined
 })
 
-// npm run test -- Assertions.spec.tsx --watch
+// npm run test -- AssertionsToBeToEqualToStrictEqual.spec.tsx --watch
