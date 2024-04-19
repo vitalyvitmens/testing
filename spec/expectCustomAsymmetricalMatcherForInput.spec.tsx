@@ -16,13 +16,13 @@ describe('Поле ввода', () => {
     expect([
       {
         label: 'Купить молоко',
-        done: false,
+        done: false, // без модификатора not - expect.toHaveDoneItem() поменяй на true иначе тест упадет
       },
       {
         label: 'Выгулять Ричи',
-        done: true,
+        done: false,
       },
-    ]).toContainEqual(expect.toHaveDoneItem())
+    ]).toContainEqual(expect.not.toHaveDoneItem()) // проверяет наличие выполненного примера используя модификатор not для изменения поведения матчера toHaveDoneItem на противоположное
   })
 })
 

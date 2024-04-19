@@ -9,6 +9,9 @@ declare global {
     interface Expect {
       toHaveDoneItem(): any
     }
+    interface InverseAsymmetricMatchers {
+      toHaveDoneItem(): any // расширяет матчер not "not.toHaveDoneItem()" для файла spec\expectCustomAsymmetricalMatcherForInput.spec.tsx
+    }
     interface Matchers<R, T> {
       toBeShorterThan(len: number): T
     }
