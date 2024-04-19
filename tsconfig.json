@@ -9,6 +9,7 @@
     "strict": true,
     "sourceMap": true,
     "target": "esnext",
+    "types": ["@testing-library/jest-dom"],
     "outDir": "build"
   },
   "include": ["src", "spec", "jest.d.ts"],
