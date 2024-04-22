@@ -7,3 +7,8 @@ export const validateHeader = (text: string) => {
 }
 
 export const sayHi = () => 'Hello!'
+
+export const headerFieldOptions = {
+  maxLength: MAX_HEADER_LENGTH,
+  message: HEADER_LENGTH_ERROR_MESSAGE,
+}

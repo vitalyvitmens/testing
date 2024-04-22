@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from 'react'
 import './style.css'
-import { HEADER_LENGTH_ERROR_MESSAGE, validateHeader } from '../utils/helpers'
+import { headerFieldOptions, validateHeader } from '../utils/helpers'
 
 type Props = {
   defaultValue: string
@@ -18,7 +18,7 @@ export const InputForMokingModules = ({ defaultValue, onChange }: Props) => {
       setInputValue(val)
       onChange(val)
     } else {
-      setLabelValue(HEADER_LENGTH_ERROR_MESSAGE)
+      setLabelValue(headerFieldOptions.message)
     }
   }
 
