@@ -9,8 +9,8 @@
     "strict": true,
     "sourceMap": true,
     "target": "esnext",
-    "types": ["@testing-library/jest-dom"],
-    "outDir": "build"
+    "types": ["@testing-library/jest-dom", "node"],
+    "outDir": "build",
   },
   "include": ["src", "spec", "jest.d.ts"],
   "exclude": ["node_modules", "coverage", "spec/__mocks__", "build"]
