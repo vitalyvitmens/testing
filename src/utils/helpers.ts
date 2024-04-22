@@ -5,3 +5,5 @@ export const HEADER_LENGTH_ERROR_MESSAGE =
 export const validateHeader = (text: string) => {
   return text.length <= MAX_HEADER_LENGTH ? true : false
 }
+
+export const sayHi = () => 'Hello!'

@@ -1,9 +1,16 @@
-//! Мокирование модулей
+//! Мокирование модулей & Частичное мокирование модулей
 import { render, screen } from '@testing-library/react'
 import { InputForMokingModules } from '../src/components/InputForMokingModules'
 import ue from '@testing-library/user-event'
 
-jest.mock('../src/utils/helpers')
+jest.mock('../src/utils/helpers', () => {
+  const realHelpers = jest.requireActual('../src/utils/helpers')
+  return {
+    // __esModule: true, // если пользуемся не сборщиками а нативными es6 модулями, тогда раскомментируй строку
+    ...realHelpers,
+    validateHeader: jest.fn().mockReturnValue(false),
+  }
+})
 
 describe('Поле ввода', () => {
   const userEvent = ue.setup()
