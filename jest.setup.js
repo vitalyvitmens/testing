@@ -11,3 +11,5 @@ jest.mock('./src/utils/helpers', () => ({
   ...jest.requireActual('./src/utils/helpers'),
   validateHeader: jest.fn().mockReturnValue(false),
 }))
+
+jest.useFakeTimers()
